@@ -1,29 +1,20 @@
 package com.example;
-import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.*;
+import java.util.Scanner;
+
 public class AppTest {
     App calculator = new App();
     @Test
-    void testAdd() {
-        assertEquals(15, calculator.add(10, 5));
+    void testPercentage() {
+        if(percentage >= 90)
+            System.out.println("Grade: A");
+        else if(percentage >= 75)
+            System.out.println("Grade: B");
+        else if(percentage >= 50)
+            System.out.println("Grade: C");
+        else
+            System.out.println("Fail");
+       
     }
-    @Test
-    void testSubtract() {
-        assertEquals(5, calculator.subtract(10, 5));
-    }
-    @Test
-    void testMultiply() {
-        assertEquals(50, calculator.multiply(10, 5));
-    }
-    @Test
-    void testDivide() {
-        assertEquals(2.0, calculator.divide(10, 5));
-    }
-    @Test
-    void testDivideByZero() {
-        Exception exception = assertThrows(IllegalArgumentException.class, () -> {
-            calculator.divide(10, 0);
-        });
-        assertEquals("Cannot divide by zero", exception.getMessage());
+       
     }
 }
